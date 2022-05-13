@@ -1,7 +1,8 @@
 import joblib
 from skimage import feature
 import cv2
-clf= joblib.load("covid-prediction-website/model.joblib")
+from pathlib import Path
+clf= joblib.load(Path(__file__).parents[0]/"model.joblib")
 
 def predict(img):
     img = cv2.resize(img, (244, 244))
