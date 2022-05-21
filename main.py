@@ -24,7 +24,7 @@ selected2 = option_menu(None, ["Home", "Explanation", "Build Random Forest"],
 icons=['house', 'bi-body-text', "bi-bookmark"], 
 menu_icon="cast", default_index=0, orientation="horizontal")
 
-#
+
 if selected2=="Home":
 
     with st.container():
@@ -32,7 +32,7 @@ if selected2=="Home":
         with left_column:
             st.header("X-ray Image Recognition")
             st.write("""
-                - Our website can used to check if you have COVID-19 just from checking you X-ray scan on chest.
+                - Our website can be used to check if you have COVID-19 just by checking your X-ray scan on chest.
                 - Please upload your scan if interested!
             """)
             uploaded_image = st.file_uploader("", type= ['png','jpg','jpeg'])
@@ -44,7 +44,7 @@ if selected2=="Home":
                 if(prediction==1):
                     st.warning("We are sorry to say that, but you got COVID virus in your system")
                 else:
-                    st.success("The Predicisions says you are a normal person, Enjoy your life")
+                    st.success("The predicisions says you are a normal person, Enjoy your life")
                     st.balloons()
         with right_column:
             st_lottie(lottie_coding,height=300, key="coding")
@@ -81,8 +81,6 @@ elif selected2=="Explanation":
         st.write("""
            - Decision trees start with a basic question (go out for running) its answer is (yes or no), from there, you can ask a series of questions according to the features (weather, temperature, wind level) of the dataset to determine the answer
            - These questions make up the decision nodes in the tree, acting as a means to split the data. Each question helps an individual to arrive at a final decision, which would be denoted by the leaf node.
-          
-            Example of decision tree:
                 """)
                
 elif selected2=="Build Random Forest":
